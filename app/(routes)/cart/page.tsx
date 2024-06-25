@@ -5,16 +5,7 @@ import useCart from "@/hooks/use-cart";
 import CartItem from "./components/cartItem";
 import Summary from "./components/summary";
 const CartPage = () => {
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-  
   const cart = useCart();
-
-  if(!isMounted) {
-    return null;
-  }
 
   return (
     <div className=" lbg-white">
